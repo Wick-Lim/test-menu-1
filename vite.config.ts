@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
+        app: './src/App.tsx',
         service: './src/Service.tsx'
       },
       output: {
