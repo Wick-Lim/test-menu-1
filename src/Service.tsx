@@ -2,7 +2,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import MyApp from "./App";
 
-class XSearch extends HTMLElement {
+class XInbound extends HTMLElement {
+  static component: string = "x-inbound";
   connectedCallback() {
     const mountPoint = document.createElement("span");
     this.attachShadow({ mode: "open" }).appendChild(mountPoint);
@@ -11,6 +12,4 @@ class XSearch extends HTMLElement {
     root.render(<MyApp />);
   }
 }
-customElements.define("x-search", XSearch);
-
-export default XSearch;
+customElements.define("x-inbound", XInbound);
