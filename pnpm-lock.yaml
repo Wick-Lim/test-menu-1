@@ -3,8 +3,10 @@ lockfileVersion: 5.4
 specifiers:
   '@emotion/react': latest
   '@emotion/styled': latest
+  '@loadable/component': ^5.15.3
   '@mui/icons-material': latest
   '@mui/material': latest
+  '@types/loadable__component': ^5.13.8
   '@types/react': latest
   '@types/react-dom': latest
   '@vitejs/plugin-react': latest
@@ -16,12 +18,14 @@ specifiers:
 dependencies:
   '@emotion/react': 11.11.1_qinpt5tsrh57s4kh6guy25fqdq
   '@emotion/styled': 11.11.0_ksuq5na5e72uen54lcvd7upyei
+  '@loadable/component': 5.15.3_react@18.2.0
   '@mui/icons-material': 5.15.0_q6kvl5zcbpwprbngll5q6eoya4
   '@mui/material': 5.15.0_pgyvmhpglcjhfsnqz6qi3j66ua
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
 devDependencies:
+  '@types/loadable__component': 5.13.8
   '@types/react': 18.2.45
   '@types/react-dom': 18.2.17
   '@vitejs/plugin-react': 4.2.1_vite@5.0.8
@@ -627,6 +631,18 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
+  /@loadable/component/5.15.3_react@18.2.0:
+    resolution: {integrity: sha512-VOgYgCABn6+/7aGIpg7m0Ruj34tGetaJzt4bQ345FwEovDQZ+dua+NWLmuJKv8rWZyxOUSfoJkmGnzyDXH2BAQ==}
+    engines: {node: '>=8'}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 7.23.6
+      hoist-non-react-statics: 3.3.2
+      react: 18.2.0
+      react-is: 16.13.1
+    dev: false
+
   /@mui/base/5.0.0-beta.27_4lf4xofvn366h3sgouxfymsrw4:
     resolution: {integrity: sha512-duL37qxihT1N0pW/gyXVezP7SttLkF+cLAs/y6g6ubEFmVadjbnZ45SeF12/vAiKzqwf5M0uFH1cczIPXFZygA==}
     engines: {node: '>=12.0.0'}
@@ -940,6 +956,12 @@ packages:
     resolution: {integrity: sha512-mSM/iKUk5fDDrEV/e83qY+Cr3I1+Q3qqTuEn++HAWYjEa1+NxZr6CNrcJGf2ZTnq4HoFGC3zaTPZTobCzCFukA==}
     dependencies:
       '@babel/types': 7.23.6
+    dev: true
+
+  /@types/loadable__component/5.13.8:
+    resolution: {integrity: sha512-0FF/WihuPkR5IFOHiBzC95bSACvgQNUQCuNy1WF8F/lCBBHgS2SxarIk4CTjWM10A72ovpmXZDRcuAXZNS+/kQ==}
+    dependencies:
+      '@types/react': 18.2.45
     dev: true
 
   /@types/parse-json/4.0.2:

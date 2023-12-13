@@ -11,12 +11,14 @@
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@loadable/component": "^5.15.3",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@types/loadable__component": "^5.13.8",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@vitejs/plugin-react": "latest",

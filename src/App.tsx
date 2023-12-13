@@ -1,8 +1,9 @@
-import { FC, lazy } from 'react';
+import { FC } from 'react';
+import loadable from '@loadable/component';
 
-const Container = lazy(() => import('@mui/material/Container'));
-const Box = lazy(() => import('@mui/material/Box'));
-const Typography = lazy(() => import('@mui/material/Typography'));
+const Container = loadable(() => import('@mui/material/Container'));
+const Box = loadable(() => import('@mui/material/Box'));
+const Typography = loadable(() => import('@mui/material/Typography'));
 
 interface App extends FC {
   menus: any[];
