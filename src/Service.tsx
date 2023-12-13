@@ -13,3 +13,4 @@ class XInbound extends HTMLElement {
   }
 }
 customElements.define("x-inbound", XInbound);
+export default XInbound;
