@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      // external: ['react', 'react-dom'],
+      external: ['react', 'react-dom'], // React와 React DOM을 external로 설정
       input: {
         main: './index.html',
         app: './src/App.tsx',
@@ -15,7 +15,11 @@ export default defineConfig({
       output: {
         entryFileNames: `[name].js`,
         chunkFileNames: `[name].js`,
-        assetFileNames: `[name].[ext]`
+        assetFileNames: `[name].[ext]`,
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
       }
     }
   }
