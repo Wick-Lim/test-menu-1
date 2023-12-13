@@ -12,3 +12,5 @@ class XSearch extends HTMLElement {
   }
 }
 customElements.define("x-search", XSearch);
+
+export default XSearch;
