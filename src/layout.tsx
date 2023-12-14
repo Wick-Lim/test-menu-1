@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs } from "@mui/material";
+import { Box, Divider, Tab, Tabs } from "@mui/material";
 import { FC } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
@@ -29,6 +29,7 @@ const Layout: FC = () => {
             <Tab value="statistics" label="통계" iconPosition="start" />
           </Tabs>
         </Box>
+        <Divider orientation="vertical" />
         <Box display="flex" flexDirection="column" flex="1">
           <Outlet />
         </Box>
