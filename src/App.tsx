@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
-const Test = styled.h1(({ theme }) => ({
+const Test = styled.h1({
   color: 'red',
-}));
+});
 
 function App() {
   return (
