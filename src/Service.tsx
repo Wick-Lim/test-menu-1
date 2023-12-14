@@ -4,7 +4,10 @@ import MyApp from "./App";
 class XInbound extends HTMLElement {
   connectedCallback() {
     const shadow = this.attachShadow({ mode: "open" });
-    const root = ReactDOM.createRoot(shadow, { identifierPrefix: 'inbound' });
+    const frame = document.createElement("div");
+    shadow.appendChild(frame);
+
+    const root = ReactDOM.createRoot(frame, { identifierPrefix: 'inbound' });
     root.render(<MyApp />);
   }
 }
