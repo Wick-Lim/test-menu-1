@@ -64,6 +64,9 @@ class XSetting extends HTMLElement {
   connectedCallback() {
     const shadow = this.attachShadow({ mode: "open" });
     const frame = document.createElement("div");
+    frame.style.display = "flex";
+    frame.style.flexDirection = "column";
+    frame.style.flex = "1";
     shadow.appendChild(frame);
 
     const cache = createCache({
