@@ -1,5 +1,8 @@
 import { FC } from 'react';
 import loadable from '@loadable/component';
+import { ThemeProvider } from "@emotion/react";
+import { CssBaseline } from "@mui/material";
+import theme from "./theme";
 
 const Container = loadable(() => import('@mui/material/Container'));
 const Box = loadable(() => import('@mui/material/Box'));
@@ -11,13 +14,16 @@ interface App extends FC {
 
 const MyApp: App = () => {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" gutterBottom>
-          Material UI Vite.js example in TypeScript
-        </Typography>
-      </Box>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" gutterBottom>
+            Material UI Vite.js example in TypeScript
+          </Typography>
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
 }
 
