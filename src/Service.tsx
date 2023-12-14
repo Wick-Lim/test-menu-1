@@ -1,6 +1,7 @@
 import * as ReactDOM from "react-dom/client";
 import MyApp from "./App";
 
+export const Name = "x-inbound";
 class XInbound extends HTMLElement {
   connectedCallback() {
     const shadow = this.attachShadow({ mode: "open" });
@@ -10,8 +11,3 @@ class XInbound extends HTMLElement {
 }
 
 customElements.define("x-inbound", XInbound);
-
-export default {
-  Name: "x-inbound",
-  Component: XInbound,
-};
