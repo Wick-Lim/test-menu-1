@@ -1,5 +1,7 @@
 import * as ReactDOM from "react-dom/client";
 import MyApp from "./App";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
 
 class XInbound extends HTMLElement {
   connectedCallback() {
@@ -7,8 +9,17 @@ class XInbound extends HTMLElement {
     const frame = document.createElement("div");
     shadow.appendChild(frame);
 
-    const root = ReactDOM.createRoot(frame, { identifierPrefix: 'inbound' });
-    root.render(<MyApp />);
+    const cache = createCache({
+      key: "my-prefix",
+      container: shadow,
+    });
+
+    const root = ReactDOM.createRoot(frame, { identifierPrefix: "inbound" });
+    root.render(
+        <CacheProvider value={cache}>
+            <MyApp />
+        </CacheProvider>
+    );
   }
 }
 
