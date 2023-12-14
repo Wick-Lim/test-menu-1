@@ -1,13 +1,9 @@
-import styled from "@emotion/styled";
-
-const Test = styled.h1({
-  color: 'red',
-});
+import { Typography } from "@mui/material";
 
 function App() {
   return (
     <>
-      <Test>Test</Test>
+      <Typography variant="h1">Hello World</Typography>
     </>
   );
 }
