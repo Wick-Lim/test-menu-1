@@ -9,7 +9,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        service: './src/CustomElement.tsx'
+        property: './src/Property.tsx',
+        collect: './src/Collect.tsx',
+        inbound: './src/Inbound.tsx',
+        'client-inform': './src/ClientInform.tsx',
+        marketing: './src/Marketing.tsx',
+        sales: './src/Sales.tsx',
+        'follow-up': './src/FollowUp.tsx',
+        setting: './src/Setting.tsx',
       },
       output: {
         entryFileNames: `[name].js`,

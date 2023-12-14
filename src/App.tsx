@@ -1,9 +1,5 @@
-import loadable from "@loadable/component";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./layout";
-
-const Home = loadable(() => import("./pages/home"));
-const About = loadable(() => import("./pages/about"));
 
 const basename = import.meta.env.MODE === "production" ? "/inbound" : undefined;
 
@@ -16,15 +12,15 @@ function App() {
           <Route element={<Layout />}>
             <Route
               path="/call"
-              element={<Home />}
+              element={<div>call</div>}
             />
             <Route
               path="/online"
-              element={<About />}
+              element={<div>online</div>}
             />
             <Route
               path="/statistics"
-              element={<About />}
+              element={<div>statistics</div>}
             />
           </Route>
         </Routes>
