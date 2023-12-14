@@ -1,6 +1,9 @@
-import { Typography } from "@mui/material";
+import loadable from "@loadable/component";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./layout";
+
+const Home = loadable(() => import("./pages/home"));
+const About = loadable(() => import("./pages/about"));
 
 const basename = import.meta.env.MODE === "production" ? "/inbound" : undefined;
 
@@ -12,11 +15,11 @@ function App() {
           <Route element={<Layout />}>
             <Route
               path="/"
-              element={<Typography variant="h1">Home</Typography>}
+              element={<Home />}
             />
             <Route
               path="/about"
-              element={<Typography variant="h1">About</Typography>}
+              element={<About />}
             />
           </Route>
         </Routes>

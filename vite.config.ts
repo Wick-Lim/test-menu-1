@@ -9,17 +9,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        app: './src/App.tsx',
-        service: './src/Service.tsx',
+        service: './src/CustomElement.tsx'
       },
       output: {
-        entryFileNames: `[name].js`,
-        chunkFileNames: `[name].js`,
-        assetFileNames: `[name].[ext]`,
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM'
-        }
+        entryFileNames: `[name].x-inbound.js`,
+        chunkFileNames: `[name].x-inbound.js`,
+        assetFileNames: `[name].x-inbound.[ext]`
       }
     }
   }
