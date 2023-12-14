@@ -1,5 +1,5 @@
 import loadable from "@loadable/component";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./layout";
 
 const Home = loadable(() => import("./pages/home"));
@@ -12,13 +12,18 @@ function App() {
     <>
       <BrowserRouter basename={basename}>
         <Routes>
+          <Route path="/" element={<Navigate to="/call" />} />
           <Route element={<Layout />}>
             <Route
-              path="/"
+              path="/call"
               element={<Home />}
             />
             <Route
-              path="/about"
+              path="/online"
+              element={<About />}
+            />
+            <Route
+              path="/statistics"
               element={<About />}
             />
           </Route>

@@ -16,9 +16,9 @@ class XInbound extends HTMLElement {
 
     const root = ReactDOM.createRoot(frame, { identifierPrefix: "inbound" });
     root.render(
-        <CacheProvider value={cache}>
-            <MyApp />
-        </CacheProvider>
+      <CacheProvider value={cache}>
+        <MyApp />
+      </CacheProvider>
     );
   }
 }

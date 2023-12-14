@@ -1,4 +1,3 @@
-import { Help, Home } from "@mui/icons-material";
 import { Box, Tab, Tabs } from "@mui/material";
 import { FC } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
@@ -12,14 +11,22 @@ const Layout: FC = () => {
   return (
     <>
       <Box display="flex" flexDirection="row" flex="1">
-        <Box display="flex" flexDirection="column" width="64px">
+        <Box display="flex" flexDirection="column" width="120px" p="16px 0px">
           <Tabs
             orientation="vertical"
             value={tab}
             onChange={(_, v) => navigate(`/${v}`)}
+            sx={{
+              ".MuiTab-root": {
+                minWidth: 0,
+                minHeight: 32,
+                p: 0,
+              },
+            }}
           >
-            <Tab value="" icon={<Home />} sx={{ minWidth: 0, p: 0 }} />
-            <Tab value="about" icon={<Help />} sx={{ minWidth: 0, p: 0 }} />
+            <Tab value="call" label="전화문의" iconPosition="start" />
+            <Tab value="online" label="온라인문의" iconPosition="start" />
+            <Tab value="statistics" label="통계" iconPosition="start" />
           </Tabs>
         </Box>
         <Box display="flex" flexDirection="column" flex="1">
