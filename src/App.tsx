@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 
 
@@ -8,13 +9,13 @@ const Test = styled.h1({
 function App() {
   return (
     <>
-      {/* <ThemeProvider theme={{
+      <ThemeProvider theme={{
         colors: {
           primary: "blue",
         },
-      }}> */}
+      }}>
         <Test>Test</Test>
-      {/* </ThemeProvider> */}
+      </ThemeProvider>
     </>
   );
 }
