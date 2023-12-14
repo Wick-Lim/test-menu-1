@@ -1,16 +1,33 @@
-import { ThemeProvider, Typography } from "@mui/material";
-import { FC } from "react";
-import theme from "./theme";
-// import "./App.css";
+import { Theme, ThemeProvider } from "@emotion/react";
+import styled from "@emotion/styled";
 
-const MyApp: FC = () => {
+interface CustomTheme extends Theme {
+  colors: {
+    primary: string;
+  };
+}
+
+const Test = styled.h1(({ theme }) => {
+  const customTheme = theme as CustomTheme;
+  const color = customTheme.colors.primary
+
+  return {
+    color: color,
+  }
+});
+
+function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Typography variant="h4" component="h1" gutterBottom>
-        app content
-      </Typography>
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={{
+        colors: {
+          primary: "blue",
+        },
+      }}>
+        <Test>Test</Test>
+      </ThemeProvider>
+    </>
   );
-};
+}
 
-export default MyApp;
+export default App;
