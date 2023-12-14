@@ -1,12 +1,13 @@
+import { Typography } from "@mui/material";
 import { FC } from "react";
-import "./App.css";
+// import "./App.css";
 
 interface App extends FC {
   menus: any[];
 }
 
 const MyApp: App = () => {
-  return <h1>Material UI Vite.js example in TypeScript</h1>;
+  return <Typography>Material UI Vite.js example in TypeScript</Typography>;
 };
 
 MyApp.menus = [
