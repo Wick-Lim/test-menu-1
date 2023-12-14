@@ -9,7 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        service: './src/Service.tsx'
+        service: './src/CustomElement.tsx'
       },
       output: {
         entryFileNames: `[name].x-inbound.js`,
