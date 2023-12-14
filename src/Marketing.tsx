@@ -1,5 +1,8 @@
-import { Box, Tabs, Tab, Divider } from "@mui/material";
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
+import { Box, Divider, Tab, Tabs } from "@mui/material";
 import { FC } from "react";
+import * as ReactDOM from "react-dom/client";
 import {
   BrowserRouter,
   Navigate,
@@ -10,7 +13,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-const basename = import.meta.env.MODE === "production" ? "/inbound" : undefined;
+const basename = import.meta.env.MODE === "production" ? "/marketing" : undefined;
 
 const Layout: FC = () => {
   const location = useLocation();
@@ -64,5 +67,27 @@ function App() {
     </>
   );
 }
+
+class XMarketing extends HTMLElement {
+  connectedCallback() {
+    const shadow = this.attachShadow({ mode: "open" });
+    const frame = document.createElement("div");
+    shadow.appendChild(frame);
+
+    const cache = createCache({
+      key: "x-marketing",
+      container: shadow,
+    });
+
+    const root = ReactDOM.createRoot(frame, { identifierPrefix: "marketing" });
+    root.render(
+      <CacheProvider value={cache}>
+        <App />
+      </CacheProvider>
+    );
+  }
+}
+
+customElements.define("x-marketing", XMarketing);
 
 export default App;

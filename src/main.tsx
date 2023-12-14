@@ -2,7 +2,7 @@ import { ThemeProvider } from '@emotion/react'
 import { AppBar, CssBaseline, Toolbar } from '@mui/material'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import App from './Inbound.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
