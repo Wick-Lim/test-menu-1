@@ -10,7 +10,7 @@ class XInbound extends HTMLElement {
     shadow.appendChild(frame);
 
     const cache = createCache({
-      key: "my-prefix",
+      key: "x-inbound",
       container: shadow,
     });
 

@@ -1,19 +1,13 @@
 import styled from "@emotion/styled";
 
 const Test = styled.h1(({ theme }) => ({
-  color: (theme as any).colors?.primary,
+  color: 'red',
 }));
 
 function App() {
   return (
     <>
-      {/* <ThemeProvider theme={{
-        colors: {
-          primary: "blue",
-        },
-      }}> */}
-        <Test>Test</Test>
-      {/* </ThemeProvider> */}
+      <Test>Test</Test>
     </>
   );
 }
