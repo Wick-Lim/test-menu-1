@@ -50,6 +50,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/claim" element={<div>claim</div>} />
           </Route>
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
     </>
@@ -80,5 +81,5 @@ class XFollowUp extends HTMLElement {
 }
 
 customElements.define("x-follow-up", XFollowUp);
-
+App.title = "사후관리";
 export default App;

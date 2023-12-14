@@ -60,6 +60,7 @@ function App() {
             <Route path="/inquiry" element={<div>inquiry</div>} />
             <Route path="/statistics" element={<div>statistics</div>} />
           </Route>
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
     </>
@@ -90,5 +91,5 @@ class XClientInform extends HTMLElement {
 }
 
 customElements.define("x-client-inform", XClientInform);
-
+App.title = "고객정보관리";
 export default App;

@@ -62,6 +62,7 @@ function App() {
             <Route path="/promotion" element={<div>promotion</div>} />
             <Route path="/statistics" element={<div>statistics</div>} />
           </Route>
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
     </>
@@ -92,5 +93,5 @@ class XMarketing extends HTMLElement {
 }
 
 customElements.define("x-marketing", XMarketing);
-
+App.title = "마케팅";
 export default App;

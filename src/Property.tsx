@@ -58,6 +58,7 @@ function App() {
             <Route path="/buy-sell" element={<div>buy-sell</div>} />
             <Route path="/browse" element={<div>browse</div>} />
           </Route>
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
     </>
@@ -88,5 +89,5 @@ class XProperty extends HTMLElement {
 }
 
 customElements.define("x-property", XProperty);
-
+App.title = "건물/매물";
 export default App;

@@ -54,6 +54,7 @@ function App() {
             <Route path="/retail" element={<div>retail</div>} />
             <Route path="/warehouse" element={<div>warehouse</div>} />
           </Route>
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
     </>
@@ -84,5 +85,5 @@ class XCollect extends HTMLElement {
 }
 
 customElements.define("x-collect", XCollect);
-
+App.title = "정보수집/지원";
 export default App;

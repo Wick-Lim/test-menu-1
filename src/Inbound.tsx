@@ -37,9 +37,9 @@ const Layout: FC = () => {
               },
             }}
           >
-            <Tab value="call" label="전화문의" iconPosition="start" />
-            <Tab value="online" label="온라인문의" iconPosition="start" />
-            <Tab value="statistics" label="통계" iconPosition="start" />
+            <Tab value="call" label="전화문의" />
+            <Tab value="online" label="온라인문의" />
+            <Tab value="statistics" label="통계" />
           </Tabs>
         </Box>
         <Divider orientation="vertical" />
@@ -62,6 +62,7 @@ function App() {
             <Route path="/online" element={<div>online</div>} />
             <Route path="/statistics" element={<div>statistics</div>} />
           </Route>
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
     </>
@@ -92,5 +93,5 @@ class XInbound extends HTMLElement {
 }
 
 customElements.define("x-inbound", XInbound);
-
+App.title = "인바운드";
 export default App;

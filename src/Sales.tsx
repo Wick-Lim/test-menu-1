@@ -60,6 +60,7 @@ function App() {
             <Route path="/interior" element={<div>interior</div>} />
             <Route path="/statistics" element={<div>statistics</div>} />
           </Route>
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
     </>
@@ -90,5 +91,5 @@ class XSales extends HTMLElement {
 }
 
 customElements.define("x-sales", XSales);
-
+App.title = "영업관리";
 export default App;

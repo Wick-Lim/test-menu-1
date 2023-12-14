@@ -29,4 +29,5 @@ function App() {
   );
 }
 
+App.title = "";
 export default App;

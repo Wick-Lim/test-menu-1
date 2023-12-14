@@ -54,6 +54,7 @@ function App() {
             <Route path="/system" element={<div>system</div>} />
             <Route path="/property" element={<div>property</div>} />
           </Route>
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
     </>
@@ -84,5 +85,5 @@ class XSetting extends HTMLElement {
 }
 
 customElements.define("x-setting", XSetting);
-
+App.title = "설정";
 export default App;
