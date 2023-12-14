@@ -12,9 +12,9 @@ export default defineConfig({
         service: './src/CustomElement.tsx'
       },
       output: {
-        entryFileNames: `[name].x-inbound.js`,
-        chunkFileNames: `[name].x-inbound.js`,
-        assetFileNames: `[name].x-inbound.[ext]`
+        entryFileNames: `[name].js`,
+        chunkFileNames: `[name].js`,
+        assetFileNames: `[name].[ext]`
       }
     }
   }
