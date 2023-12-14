@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: './index.html',
         app: './src/App.tsx',
+        service: './src/Service.tsx',
       },
       output: {
         entryFileNames: `[name].js`,
