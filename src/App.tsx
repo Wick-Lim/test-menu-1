@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./App.css";
 
 interface App extends FC {
   menus: any[];
